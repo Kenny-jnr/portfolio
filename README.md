@@ -1,5 +1,7 @@
 ## 💻 Kenny's Portfolio
 
+[🌐 Portfolio Website](https://your-portfolio-link.com)
+
 The purpose of this project is to have a place to show my "who I am", my experiences, and especially journey through the development of my projects.
 
 ## What it Entails
@@ -9,11 +11,6 @@ By making use of the Navigation bar, you can access my Resume, Projects and my L
 Feedbacks: Any feedbacks you have, feel free to use the feedback button on the right side of the screen!
 
 ## 🔧 Tech Stack Used
-
-- **Languages:** Python, JavaScript, SQL, HTML, CSS
-- **Frameworks & Libraries:** Jinja, Flask
-- **Cloud & DevOps:** Docker
-- **Other Tools:** Git, VS Code
 
 **Languages**  
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)  
