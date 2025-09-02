@@ -1,0 +1,43 @@
+{% extends 'shared/layout.html' %} {% block maincontent %}
+<!-- div for profile picture and self bio-->
+<div class="profile">
+  <div class="profile-pic">
+    <img
+      src="../static/main/images/headshot.jpg"
+      alt="Headshot"
+      loading="lazy"
+    />
+  </div>
+  <!-- self bio -->
+  <div class="p-container">
+    <h1>Hello, I'm Kenny!</h1>
+    <p>
+      A software engineer based in Michigan, with a passion for building
+      open-source projects and exploring the endless possibilities of
+      technology. I was raised in Abuja, Nigeria, and I'm proudly of Igbo
+      descent. I have a growing interest in full-stack development, cloud
+      engineering, and machine learning, and I'm always looking for
+      opportunities to sharpen my skills and grow as an engineer.
+    </p>
+  </div>
+</div>
+<div class="intro">
+  <h1>About This Portfolio</h1>
+  <p>
+    This portfolio showcases my journey and capabilities as a software engineer,
+    with a focus on full stack development and machine learning concepts.
+    Alongside my GitHub, this site is a window into both the impactful solutions
+    I’ve built and the exciting projects I’m currently exploring.
+    <strong
+      >To view my projects use the options in the navigation bar above!</strong
+    >
+  </p>
+</div>
+<hr />
+<div class="fun-fact">
+  <p class="fact-title">A Fun Fact about me:</p>
+  <p class="fact">
+    <strong>{{fun_fact}}</strong>
+  </p>
+</div>
+{% endblock %}

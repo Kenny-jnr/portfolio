@@ -1,0 +1,13 @@
+.heading {
+  margin: 5vh 0;
+  font-size: larger;
+  color: #301934;
+}
+
+.comments {
+  display: flex;
+  width: 80%;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: left;
+}

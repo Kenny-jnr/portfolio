@@ -1,0 +1,16 @@
+footer {
+  height: 10vh;
+  background-color: #c1bfbf;
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5vh;
+  bottom: 0;
+  transform: translateY(0);
+}
+
+footer p {
+  color: rgb(91, 90, 90);
+}

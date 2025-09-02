@@ -1,0 +1,4 @@
+"inst_id","type","name","department","address","city","state","zip"
+"1","Academia","Michigan State University","Computer Science",NULL,"East Lansing","Michigan",NULL
+"2","Industry","Amazon","Amazon Prime Videos",NULL,"Atlanta","Georgia",NULL
+"3","Industry","Jackson National Life","Information Technology Career Development Program",NULL,"East Lansing","Michigan",NULL

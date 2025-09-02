@@ -1,0 +1,18 @@
+{% extends 'shared/layout.html' %}
+
+<!-- Thinking of adding additional css to the feedback page -->
+{% block extracss %}{% endblock %} {% block maincontent %}
+
+<p class="heading">
+  Thanks for your Feedback - here's what other's had to say:
+</p>
+
+<div class="comments">
+  {% for row in feedback_data%}
+  <ul>
+    <li>{{ row['name'] }} said: {{ row['comment'] }}</li>
+  </ul>
+  {% endfor %}
+</div>
+
+{% endblock %}

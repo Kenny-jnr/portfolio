@@ -1,0 +1,65 @@
+.divider {
+  padding-top: 1vh;
+  width: 100%;
+  gap: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.with-padding {
+  padding-top: 5vh;
+}
+
+.experience {
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.position-title {
+  font-size: larger;
+  font-style: italic;
+}
+
+.introduction {
+  padding-top: 5vh;
+  width: 100%;
+  display: flex;
+  justify-content: left;
+  align-items: left;
+}
+
+.full-resume {
+  padding-left: 5px;
+  color: black;
+}
+
+.full-resume:hover {
+  color: grey;
+}
+
+.seperator {
+  margin-top: 2vh;
+}
+
+.skill-container {
+  width: 100%;
+  justify-content: left;
+}
+
+.skills {
+  font-size: small;
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  justify-content: left;
+}
+
+.spacing {
+  padding-right: 5px;
+}
+
+.right-content {
+  width: 15%;
+}

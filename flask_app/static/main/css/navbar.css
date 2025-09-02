@@ -1,0 +1,116 @@
+nav {
+  background-color: #333;
+  top: 0;
+  height: 5vh;
+  min-height: 4vh;
+  padding: 2% 8%;
+}
+
+.nav-title {
+  color: #ffffff;
+  font-size: 1.2rem;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2.2em;
+  list-style: none;
+  font-size: 1.2rem;
+  position: sticky;
+}
+
+label {
+  color: #ffffff;
+  font-size: 5vw;
+  line-height: 5vh;
+  display: none;
+  width: 5vw;
+  float: right;
+}
+
+#toggle {
+  display: none;
+}
+
+.nav-links li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hamburger-menu {
+  display: none;
+}
+
+.hamburger-menu a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 24px;
+}
+
+/* making use of media query to trigger when the width of screen is below 650px  of space provided*/
+@media (max-width: 650px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  label {
+    display: block;
+    cursor: pointer;
+  }
+
+  label:hover {
+    opacity: 50%;
+  }
+
+  .hamburger-menu {
+    text-align: left;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 80vh;
+    background-color: #4f4e4e;
+    padding-top: 5vh;
+    z-index: 1000;
+  }
+
+  .hamburger-menu a {
+    display: block;
+    padding-top: 1vh;
+  }
+
+  #toggle:checked + .hamburger-menu {
+    display: block;
+  }
+}
+
+.menu a:hover,
+.hamburger-menu a:hover {
+  opacity: 50%;
+}
+
+nav a {
+  display: inline-block;
+  width: fit-content;
+  text-decoration: none;
+  transition: all 300ms ease;
+  color: #ffffff;
+}
+
+nav a img {
+  display: block;
+  width: 3vw;
+  height: auto;
+  transition: all 300ms ease;
+}

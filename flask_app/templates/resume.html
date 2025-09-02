@@ -1,0 +1,79 @@
+{% extends 'shared/layout.html' %}
+
+<!-- Thinking of adding additional css to the resume page -->
+{% block extracss %}{% endblock %} {% block maincontent %}
+
+<div class="introduction">
+  <p>
+    <strong>Below is a summary of my Resume. Access to full resume?</strong>
+  </p>
+  <a
+    href="https://drive.google.com/file/d/1dhIKGlPsd-6xOef2coRbz2QZr0zHHLcT/view?usp=sharing"
+    class="full-resume"
+    >Full Resume</a
+  >
+</div>
+
+<!-- For each institution - generate a row -->
+{% for inst_id, inst in resume_data.items() %}
+<!-- we want the name and date to be flexed out having a need css for that -->
+<div class="divider with-padding">
+  <h1>{{ inst['institution_name']}}</h1>
+  <p class="right-content">
+    {{inst['city']}}, {{inst['state']}}{% if inst['zip'] %}, {{ inst['zip'] }}{%
+    endif %}
+  </p>
+</div>
+
+{% if inst['positions'] != {} %} {% for pos_id, pos in inst['positions'].items()
+%}
+<!-- Do something else... -->
+<div class="divider">
+  <div>
+    <p class="position-title">{{ pos['title']}}</p>
+    <p>{{ pos['responsibilities']}}</p>
+  </div>
+  <div class="right-content">
+    <p>
+      {% if pos['start_date'] %} {{ pos['start_date'] }}{% if pos['end_date'] %}
+      - {{ pos['end_date'] }}{% else %} - Present{% endif %} {% endif %}
+    </p>
+  </div>
+</div>
+
+{% if pos['experiences'] != {} %} {% for exp_id, exp in
+pos['experiences'].items() %}
+
+<div class="divider">
+  <div class="experience">
+    <ul>
+      <li><strong>{{ exp['name'] }}:</strong> {{ exp['description'] }}</li>
+    </ul>
+  </div>
+  <div class="right-content">
+    <p>
+      {% if exp['start_date'] %} {{ exp['start_date'] }}{% if exp['end_date'] %}
+      - {{ exp['end_date'] }}{% else %} - Present{% endif %} {% endif %}
+    </p>
+  </div>
+</div>
+
+<div class="skill-container">
+  <div class="skills">
+    <p class="spacing"><strong>Skills: </strong></p>
+
+    {% if exp['skills'] != {} %} {% for skill_id, skill in exp['skills'].items()
+    %}
+    <p class="spacing">
+      {{ skill['name']|default('N/A') }} ({{ skill['skill_level']|default('N/A')
+      }}){% if not loop.last %},{% endif %}
+    </p>
+
+    {% endfor %} {% endif %}
+  </div>
+</div>
+
+{% endfor %} {% endif %} {% endfor %} {% endif %}
+
+<hr class="seperator" />
+{% endfor %} {% endblock %}

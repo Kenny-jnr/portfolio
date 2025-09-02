@@ -1,0 +1,9 @@
+"position_id","name","description","hyperlink","start_date","end_date"
+"1","Relevant Coursework","The following are courses of relevance",NULL,NULL,NULL
+"2","Design","Designed the solution to fix the problem with the existing API.",NULL,"2024-06-03","2024-06-10"
+"2","Deployment","Developed a more accurate and reliable version of a job using Java, reducing the need for intermediary steps and improving overall efficiency by 30%.",NULL,"2024-06-10","2024-07-13"
+"2","Integration","Integrated the job into the GetChannelByTerritory API using AWS and Java.",NULL,"2024-07-13","2024-08-10"
+"2","Comparison","Compared the new API with the old API to ensure right results using python scripting.",NULL,"2024-08-10","2024-08-23"
+"3","Scaling","Assisted in migrating the company on-premise infrastructure to the cloud.",NULL,"2023-09-11","2023-12-10"
+"4","Deployment","Involved in front-end and back-end of developing the Jackson Jpod website to implement the Jackson Transaction view tab.",NULL,"2024-01-11","2024-04-28"
+"5","Scripting","Developed scripts making use of Python for getting security and posture scores from WIZ and Ivanti Neurons for Power BI dashboards.",NULL,"2024-09-10","2024-12-07"

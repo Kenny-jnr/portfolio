@@ -1,0 +1,152 @@
+<!-- FILL ME IN WITH CODE FOR YOUR PAGE LAYOUT -->
+<!DOCTYPE html>
+<html lang="eng">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Kenny's Portfolio</title>
+
+    <!-- Link to the CSS files -->
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='main/css/main.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='main/css/footer.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='main/css/navbar.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='main/css/header.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='piano/css/piano.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='main/css/resume.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='main/css/feedback.css') }}"
+    />
+
+    <!-- favicon -->
+    <link
+      rel="shortcut icon"
+      href="{{ url_for('static', filename='main/images/favicon.ico') }}"
+    />
+    {% block extracss %}{% endblock %}
+  </head>
+
+  <body>
+    <article>
+      <header>
+        <!-- A professional inclusion of an image to depict the banner header of this webpage-->
+        <img
+          src="../static/main/images/my-banner.jpg"
+          alt="professional banner header"
+          loading="lazy"
+        />
+      </header>
+
+      <!-- The navigation bar -->
+      <nav id="navigation">
+        <div class="nav-container">
+          <p class="nav-title">Kenny Umobi</p>
+
+          <label for="toggle">&#9776;</label>
+          <input type="checkbox" id="toggle" />
+
+          <!-- This menu only shows when the menu is clicked-->
+          <div class="hamburger-menu">
+            <a href="/home">Home</a>
+            <a href="/projects">Projects</a>
+            <a href="/resume">Resume</a>
+            <a href="https://www.github.com/kenny-jnr">Github</a>
+            <a href="https://linkedin.com/in/ekene-umobi">Linkedin</a>
+          </div>
+
+          <ul class="nav-links">
+            <li><a href="/home">Home</a></li>
+            <li><a href="/projects">Projects</a></li>
+            <li><a href="/resume">Resume</a></li>
+            <li><a href="https://www.github.com/kenny-jnr">Github</a></li>
+            <li>
+              <a href="https://linkedin.com/in/ekene-umobi">
+                <img
+                  src="{{ url_for('static', filename='main/images/social-linkedin.png') }}"
+                  alt="Linkedin"
+                  loading="lazy"
+                />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- The main content  -->
+      <main>
+        <!-- button that makes the form appear or disappear  -->
+        <button id="feedback">FEEDBACK</button>
+
+        <!-- form that appears only when I click on feedback button  -->
+        <div id="feedback-form-container">
+          <form class="feedback-form" action="/processfeedback" method="POST">
+            <label for="name"></label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Your Name"
+              required
+            />
+
+            <label for="email"></label>
+            <input
+              type="text"
+              id="email"
+              name="email"
+              placeholder="Your Email"
+              required
+            />
+
+            <label for="feedback-message"></label>
+            <textarea
+              id="feedback-message"
+              name="feedback-message"
+              placeholder="Insert Feedback here (max: 255 characters)"
+              maxlength="255"
+            ></textarea>
+
+            <button class="send" type="submit">SEND</button>
+          </form>
+        </div>
+
+        {% block maincontent %} {% endblock %}
+      </main>
+
+      <!-- The footer of the file -->
+      <footer>
+        <p>© 2025 Ekenedirichukwu S. Umobi</p>
+      </footer>
+
+      <script
+        src="{{ url_for('static', filename='main/js/main.js') }}"
+        defer
+      ></script>
+
+      <script
+        src="{{ url_for('static', filename='piano/js/piano.js') }}"
+        defer
+      ></script>
+
+      {% block extrajs %}{% endblock %}
+    </article>
+  </body>
+</html>

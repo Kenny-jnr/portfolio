@@ -1,0 +1,37 @@
+{% extends 'shared/layout.html' %} {% block maincontent %}
+<div class="fun-fact">
+  <p class="fact-title">
+    My work showcases skills in frontend development, backend APIs, and
+    databases. Below is a list of projects I worked on:
+  </p>
+  <p class="fact">
+    Click an Image, or hyperlink in the description to view the project.
+  </p>
+</div>
+<hr />
+<!-- used the same name here, but it is to show the prfile pic of the project, and the description on the side-->
+<div class="profile">
+  <div class="profile-pic">
+    <a href="/piano">
+      <img src="../static/main/images/piano.jpeg" alt="Piano" loading="lazy" />
+    </a>
+  </div>
+  <!-- description of the project. -->
+  <div class="p-container">
+    <h2>JavaScript Piano</h2>
+    <p>
+      As part of my first Homework assignment in CSE477, I developed an
+      interactive piano build in pure HTML, CSS and JavaScript. This tool (in
+      addition to my webpage) highlight my ability to build beautiful and
+      mobile-friendly front-end applications.<a href="/piano"
+        >Click here to see and play!</a
+      >
+      <br />
+    </p>
+  </div>
+</div>
+<hr />
+<div class="fun-fact">
+  <p class="fact-title">More coming soon!</p>
+</div>
+{% endblock %}
