@@ -2,7 +2,7 @@
 
 [🌐 Portfolio Website](https://your-portfolio-link.com)
 
-The purpose of this project is to have a place to show my "who I am", my experiences, and especially journey through the development of my projects.
+The purpose of this project is to have a place to show my "who I am", my experiences, and especially the journey through the development of my projects.
 
 ## What it Entails
 
